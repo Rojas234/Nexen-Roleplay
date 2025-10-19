@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXEN Roleplay | Vive tu historia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* RESET BÁSICO Y FUENTES */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117; /* Fondo muy oscuro, tipo GitHub dark */
+            color: #f0f6fc; /* Color de texto claro */
+            line-height: 1.6;
+        }
 
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: #38a1ff; /* Azul vibrante para los títulos */
+            letter-spacing: 2px;
+        }
+
+        /* ESTILO DEL LOGO Y CABECERA */
+        .hero-section {
+            background: url('img/fondo-urbano-oscuro.jpg') no-repeat center center; /* REEMPLAZAR CON TU IMAGEN */
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* Superposición oscura para que el texto sea legible y coincida con el logo */
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Efecto de superposición para el color azul oscuro del logo */
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Opacidad negra */
+            /* backdrop-filter: blur(2px); Opcional: añade desenfoque */
+        }
+
+        .logo-container {
+            z-index: 10; /* Asegura que el logo esté sobre el overlay */
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 250px;
+            height: auto;
+        }
+
+        .hero-content {
+            z-index: 10;
+        }
+
+        .hero-content h1 {
+            font-size: 4em;
+            margin-bottom: 0.1em;
+            color: #ffffff; /* Blanco para el nombre principal */
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #b0c7e2;
+        }
+
+        .ip-info {
+            font-size: 1.1em;
+            margin-top: 15px;
+            color: #79d2e6; /* Azul más claro */
+            padding: 5px 10px;
+            background: rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+
+        /* BOTÓN DE ACCIÓN */
+        .btn-join {
+            display: inline-block;
+            background-color: #38a1ff; /* Azul principal */
+            color: #0d1117;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+            border: 2px solid #38a1ff;
+        }
+
+        .btn-join:hover {
+            background-color: #0077c9; /* Tono de azul más oscuro al pasar el ratón */
+            border-color: #0077c9;
+            color: #ffffff;
+        }
+
+        /* SECCIÓN DE CARACTERÍSTICAS */
+        .features-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #161b22; /* Un gris azulado oscuro */
+        }
+
+        .features-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #38a1ff;
+        }
+
+        .feature-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background-color: #0d1117;
+            padding: 30px;
+            border-radius: 10px;
+            width: calc(33% - 40px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-left: 5px solid #38a1ff;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            color: #aeb8c4;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background-color: #010409; /* Negro muy oscuro */
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            border-top: 1px solid #161b22;
+        }
+
+        footer a {
+            color: #38a1ff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* MEDIA QUERIES para responsividad */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3em;
+            }
+
+            .feature-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="logo-container">
+            <img src="img/logo-nexen.png" alt="Logo de NEXEN Roleplay" class="logo">
+        </div>
+        
+        <div class="hero-content">
+            <h1>NEXEN Roleplay</h1>
+            <p>Donde la realidad se encuentra con la innovación. Una experiencia de rol inmersiva te espera.</p>
+            <a href="URL_DE_TU_DISCORD" target="_blank" class="btn-join">¡Únete a la Ciudad!</a>
+            <p class="ip-info">IP del Servidor: `connect 123.456.789` (¡Cámbiala!)</p>
+        </div>
+    </header>
+
+    <section class="features-section">
+        <h2>¿Por Qué NEXEN?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Economía Dinámica</h3>
+                <p>Sistema de economía realista con oportunidades únicas de negocios legales e ilegales.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Roles Exclusivos</h3>
+                <p>Conviértete en policía, médico, mecánico, o un criminal de alto nivel con facciones únicas.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Comunidad Activa</h3>
+                <p>Staff dedicado y una comunidad amigable lista para crear historias inolvidables.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NEXEN Roleplay. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="URL_DE_TU_TWITTER" target="_blank">Twitter</a> | 
+            <a href="URL_DE_TU_INSTAGRAM" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
