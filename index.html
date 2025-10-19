@@ -4,21 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXEN Roleplay | Vive tu historia</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* RESET BÁSICO Y FUENTES */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117; 
+            color: #f0f6fc; 
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: #38a1ff; 
+            letter-spacing: 2px;
+        }
+
+        /* ESTILO DEL LOGO Y CABECERA */
+        .hero-section {
+            /* DEBES REEMPLAZAR ESTA URL CON TU PROPIA IMAGEN DE FONDO EN IMGUR O DEJARLA EN LA CARPETA IMG */
+            background: url('img/fondo-urbano-oscuro.jpg') no-repeat center center; 
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+        }
+
+        .logo-container {
+            z-index: 10; 
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 250px;
+            height: auto;
+        }
+
+        .hero-content {
+            z-index: 10;
+        }
+
+        .hero-content h1 {
+            font-size: 4em;
+            margin-bottom: 0.1em;
+            color: #ffffff; 
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #b0c7e2;
+        }
+
+        .ip-info {
+            font-size: 1.1em;
+            margin-top: 15px;
+            color: #79d2e6; 
+            padding: 5px 10px;
+            background: rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+
+        /* ESTILO PARA EL BOTÓN DE IMAGEN */
+        .img-btn-join img {
+            width: 250px; 
+            height: auto;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(56, 161, 255, 0.5); 
+        }
+        
+        .img-btn-join img:hover {
+            opacity: 0.9; 
+            transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(56, 161, 255, 0.8);
+        }
+
+        /* SECCIÓN DE CARACTERÍSTICAS */
+        .features-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #161b22; 
+        }
+
+        .features-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #38a1ff;
+        }
+
+        .feature-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background-color: #0d1117;
+            padding: 30px;
+            border-radius: 10px;
+            width: calc(33% - 40px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-left: 5px solid #38a1ff;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            color: #aeb8c4;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background-color: #010409; 
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            border-top: 1px solid #161b22;
+        }
+
+        footer a {
+            color: #38a1ff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* MEDIA QUERIES para responsividad */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3em;
+            }
+
+            .feature-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .img-btn-join img {
+                width: 80%; 
+            }
+        }
+    </style>
 </head>
 <body>
 
     <header class="hero-section">
         <div class="logo-container">
-            <img src="img/logo-nexen.png" alt="Logo de NEXEN Roleplay" class="logo">
+            <img src="https://i.imgur.com/LOGO_NEXEN_EJEMPLO.png" alt="Logo de NEXEN Roleplay" class="logo">
         </div>
         
         <div class="hero-content">
             <h1>NEXEN Roleplay</h1>
             <p>Donde la realidad se encuentra con la innovación. Una experiencia de rol inmersiva te espera.</p>
-            <a href="URL_DE_TU_DISCORD" target="_blank" class="btn-join">¡Únete a la Ciudad!</a>
-            <p class="ip-info">IP del Servidor: `connect 123.456.789`</p>
+            
+            <a href="TU_ENLACE_DE_DISCORD_AQUÍ" target="_blank" class="img-btn-join">
+                <img src="https://i.imgur.com/BOTON_DISCORD_EJEMPLO.png" alt="Botón Únete a la Ciudad">
+            </a>
+            
+            <p class="ip-info">IP del Servidor: `connect 123.456.789` (¡Cámbiala!)</p>
         </div>
     </header>
 
