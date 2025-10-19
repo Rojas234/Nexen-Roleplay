@@ -12,21 +12,20 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0d1117; 
-            color: #f0f6fc; 
+            background-color: #0d1117; /* Fondo muy oscuro, tipo GitHub dark */
+            color: #f0f6fc; /* Color de texto claro */
             line-height: 1.6;
         }
 
         h1, h2, h3 {
             font-family: 'Bebas Neue', sans-serif;
-            color: #38a1ff; 
+            color: #38a1ff; /* Azul vibrante para los títulos */
             letter-spacing: 2px;
         }
 
         /* ESTILO DEL LOGO Y CABECERA */
         .hero-section {
-            /* DEBES REEMPLAZAR ESTA URL CON TU PROPIA IMAGEN DE FONDO EN IMGUR O DEJARLA EN LA CARPETA IMG */
-            background: url('img/fondo-urbano-oscuro.jpg') no-repeat center center; 
+            background: url('img/fondo-urbano-oscuro.jpg') no-repeat center center; /* REEMPLAZAR CON TU IMAGEN */
             background-size: cover;
             height: 100vh;
             display: flex;
@@ -34,10 +33,12 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            /* Superposición oscura para que el texto sea legible y coincida con el logo */
             position: relative;
             padding: 20px;
         }
 
+        /* Efecto de superposición para el color azul oscuro del logo */
         .hero-section::before {
             content: "";
             position: absolute;
@@ -45,11 +46,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); 
+            background-color: rgba(0, 0, 0, 0.7); /* Opacidad negra */
+            /* backdrop-filter: blur(2px); Opcional: añade desenfoque */
         }
 
         .logo-container {
-            z-index: 10; 
+            z-index: 10; /* Asegura que el logo esté sobre el overlay */
             margin-bottom: 20px;
         }
 
@@ -65,7 +67,7 @@
         .hero-content h1 {
             font-size: 4em;
             margin-bottom: 0.1em;
-            color: #ffffff; 
+            color: #ffffff; /* Blanco para el nombre principal */
         }
 
         .hero-content p {
@@ -77,7 +79,7 @@
         .ip-info {
             font-size: 1.1em;
             margin-top: 15px;
-            color: #79d2e6; 
+            color: #79d2e6; /* Azul más claro */
             padding: 5px 10px;
             background: rgba(0, 0, 0, 0.4);
             display: inline-block;
@@ -85,27 +87,31 @@
         }
 
 
-        /* ESTILO PARA EL BOTÓN DE IMAGEN */
-        .img-btn-join img {
-            width: 250px; 
-            height: auto;
-            transition: opacity 0.3s ease, transform 0.2s ease;
-            cursor: pointer;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(56, 161, 255, 0.5); 
+        /* BOTÓN DE ACCIÓN */
+        .btn-join {
+            display: inline-block;
+            background-color: #38a1ff; /* Azul principal */
+            color: #0d1117;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+            border: 2px solid #38a1ff;
         }
-        
-        .img-btn-join img:hover {
-            opacity: 0.9; 
-            transform: scale(1.02);
-            box-shadow: 0 0 25px rgba(56, 161, 255, 0.8);
+
+        .btn-join:hover {
+            background-color: #0077c9; /* Tono de azul más oscuro al pasar el ratón */
+            border-color: #0077c9;
+            color: #ffffff;
         }
 
         /* SECCIÓN DE CARACTERÍSTICAS */
         .features-section {
             padding: 60px 20px;
             text-align: center;
-            background-color: #161b22; 
+            background-color: #161b22; /* Un gris azulado oscuro */
         }
 
         .features-section h2 {
@@ -148,7 +154,7 @@
 
         /* PIE DE PÁGINA */
         footer {
-            background-color: #010409; 
+            background-color: #010409; /* Negro muy oscuro */
             padding: 20px;
             text-align: center;
             font-size: 0.9em;
@@ -175,10 +181,6 @@
                 width: 100%;
                 margin-bottom: 20px;
             }
-            
-            .img-btn-join img {
-                width: 80%; 
-            }
         }
     </style>
 </head>
@@ -186,17 +188,13 @@
 
     <header class="hero-section">
         <div class="logo-container">
-            <img src="https://i.imgur.com/LOGO_NEXEN_EJEMPLO.png" alt="Logo de NEXEN Roleplay" class="logo">
+            <img src="img/logo-nexen.png" alt="Logo de NEXEN Roleplay" class="logo">
         </div>
         
         <div class="hero-content">
             <h1>NEXEN Roleplay</h1>
             <p>Donde la realidad se encuentra con la innovación. Una experiencia de rol inmersiva te espera.</p>
-            
-            <a href="TU_ENLACE_DE_DISCORD_AQUÍ" target="_blank" class="img-btn-join">
-                <img src="https://i.imgur.com/BOTON_DISCORD_EJEMPLO.png" alt="Botón Únete a la Ciudad">
-            </a>
-            
+            <a href="URL_DE_TU_DISCORD" target="_blank" class="btn-join">¡Únete a la Ciudad!</a>
             <p class="ip-info">IP del Servidor: `connect 123.456.789` (¡Cámbiala!)</p>
         </div>
     </header>
